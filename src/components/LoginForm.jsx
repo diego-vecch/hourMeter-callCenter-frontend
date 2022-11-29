@@ -14,7 +14,7 @@ export const LoginForm = () => {
       >
         <div className="card-body items-center text-center">
           <h2 className="card-title mt-6 mb-7">Ingreso</h2>
-          <p>Nombre se usuario</p>
+          <p>Nombre de usuario</p>
           <input
             type="text"
             name="user"
