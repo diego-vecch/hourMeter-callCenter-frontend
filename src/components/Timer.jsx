@@ -5,16 +5,12 @@ const MINUTE = SECOND * 60;
 const HOUR = MINUTE * 60;
 
 export const Timer = ({ time }) => {
-  const [startTime, setStartTime] = useState(time ? time : 0);
+  const [startTime, setStartTime] = useState(time);
   const [counterTime, setCounterTime] = useState(0);
 
   useEffect(() => {
     if (startTime !== 0) {
-      const interval = setInterval(
-        () => setCounterTime(Date.now() - startTime),
-        1000
-      );
-      return () => clearInterval(interval);
+      setInterval(() => setCounterTime(Date.now() - startTime), 1000);
     }
   }, [startTime]);
 

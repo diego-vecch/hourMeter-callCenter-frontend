@@ -1,4 +1,4 @@
-export const Initiation = () => {
+export const Initiation = ({setMode}) => {
   return (
     <>
       <div className="container mx-auto w-full h-72 card bg-base-200 shadow-xl pt-4">
@@ -6,7 +6,7 @@ export const Initiation = () => {
           <h2 className="card-title">Bienvenido usuario</h2>
           <p className="pt-8">Total de horas trabajadas</p>
           <div className="card-actions">
-            <button className="btn btn-primary">Iniciar Jornada</button>
+            <button className="btn btn-primary" onClick={() => setMode("working")}>Iniciar Jornada</button>
           </div>
         </div>
       </div>
