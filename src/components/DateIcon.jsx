@@ -1,5 +1,9 @@
+import { useEffect, useState } from "react";
 export const DateIcon = () => {
-  let fecha = Date();
+  let [fecha, setFecha] = useState(Date());
+  useEffect(() => {
+    setInterval(() => setFecha(Date())), 1000;
+  }, [fecha]);
 
   return (
     <>
