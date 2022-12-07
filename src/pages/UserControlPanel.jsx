@@ -1,8 +1,8 @@
 import { DateIcon } from "../components/DateIcon";
 import { Initiation } from "../components/Initiation";
-import { NavbarUser } from "../components/NavbarUser";
 import { Working } from "../components/Working";
 import { useEffect, useState } from "react";
+import { Navbar } from "../components/Navbar";
 
 export const UserControlPanel = () => {
   const [mode, setMode] = useState("none");
@@ -13,10 +13,10 @@ export const UserControlPanel = () => {
 
   return (
     <>
-      <NavbarUser />
+      <Navbar />
       <DateIcon />
       {mode === "none" && <Initiation setMode={setMode} />}
-      {mode === "working" && <Working/>}
+      {mode === "working" && <Working />}
     </>
   );
 };
