@@ -7,7 +7,7 @@ export const Navbar = () => {
   return (
     <div className="navbar bg-base-100">
       <div className="navbar-start">
-        <a className="btn btn-ghost normal-case text-xl">CallCenter</a>
+        <a className="btn btn-ghost normal-case text-3xl text-primary-focus">CallCenter</a>
       </div>
       <div className="navbar-end gap-2">
         {location === "/" && (
@@ -27,6 +27,19 @@ export const Navbar = () => {
             </div>
             <button className="">Usuario</button>
           </>
+        )}
+        {location=== "/user-control-panel" && (
+          <ul className="menu menu-horizontal p-0 text-base-content">
+          <li className="hover:bg-neutral-content">
+            <a >Panel de control</a>
+          </li>
+          <li className="hover:bg-neutral-content">
+            <a>Panel de administración</a>
+          </li>
+          <li>
+            <a>Nombre de usuario</a>
+          </li>
+        </ul>
         )}
       </div>
     </div>
