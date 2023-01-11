@@ -4,7 +4,7 @@ export const Initiation = ({setMode}) => {
   return (
     <>
   
-      <div className="container mx-auto w-full h-72 card bg-base-200 shadow-xl pt-4">
+      <div className="container mx-auto w-full h-72 card bg-base-300 shadow-xl pt-4">
       <Navbar/>
         <div className="card-body items-center text-center">
           <h2 className="card-title">Bienvenido usuario</h2>
