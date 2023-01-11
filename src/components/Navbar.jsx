@@ -5,7 +5,7 @@ export const Navbar = () => {
   console.log(location);
 
   return (
-    <div className="navbar bg-base-100">
+    <div className="navbar bg-base-200">
       <div className="navbar-start">
         <a className="btn btn-ghost normal-case text-3xl text-primary-focus">CallCenter</a>
       </div>
