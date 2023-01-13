@@ -1,6 +1,8 @@
+import FormRegister from "../components/FormRegister";
+
 export default function RegisterPage() {
     return (<div>
-        <h1>Register</h1>
+        <FormRegister/>
         
     </div>);
 }
