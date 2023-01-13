@@ -2,7 +2,7 @@
 module.exports = {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: { screens: { "vy-sm": "420px" } },
   },
   plugins: [require("daisyui")],
   daisyui: {
@@ -11,7 +11,7 @@ module.exports = {
       {
         night: {
           ...require("daisyui/src/colors/themes")["[data-theme=night]"],
-          "base-300": "#0D2654"
+          "base-300": "#0D2654",
         },
       },
     ],

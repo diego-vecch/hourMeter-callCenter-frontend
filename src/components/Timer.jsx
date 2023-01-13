@@ -15,17 +15,17 @@ export const Timer = ({ time }) => {
   }, [startTime]);
 
   return (
-    <div className="flex gap-2">
+    <div className="grid grid-cols-3 gap-0 vy-sm:gap-2">
       {Object.entries({
         Horas: (counterTime / HOUR) % 24,
         Minutos: (counterTime / MINUTE) % 60,
         Segundos: (counterTime / SECOND) % 60,
       }).map(([label, value]) => (
-        <div key={label} className="">
-          <div className="w-20 text-center">
-            <p className="text-4xl">
+        <div key={label} className=" ">
+          <div className="ml-0 lg:ml-4 w-16 text-center ">
+            <div className="text-xl vy-sm:text-4xl ">
               {`${Math.floor(value)}`.padStart(2, "0")}
-            </p>
+            </div>
             <span className="text-xs">{label}</span>
           </div>
         </div>
