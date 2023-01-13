@@ -7,7 +7,7 @@ export const DateIcon = () => {
 
   return (
     <>
-      <div className="px-20">{fecha}</div>
+      <div className="px-2 pb-0 mb-1 md:px-1 md:mb-4 text-xs md:text-base text-center">{fecha}</div>
     </>
   );
 };
