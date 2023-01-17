@@ -21,7 +21,7 @@ export const Timer = ({ time }) => {
         Minutos: (counterTime / MINUTE) % 60,
         Segundos: (counterTime / SECOND) % 60,
       }).map(([label, value]) => (
-        <div key={label} className=" ">
+        <div key={label}>
           <div className="ml-0 lg:ml-4 w-16 text-center ">
             <div className="text-xl vy-sm:text-4xl ">
               {`${Math.floor(value)}`.padStart(2, "0")}
