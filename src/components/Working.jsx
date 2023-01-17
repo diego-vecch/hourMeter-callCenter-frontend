@@ -6,8 +6,8 @@ export const Working = () => {
       <h2 className="text-2xl mt-7 mb-8 mx-10 text-center ">Trabajando</h2>
       <Timer time={Date.now()} />
       <div className="flex gap-2 mt-4">
-        <button class="bg-slate-800 w-28 h-10 text-sm">DESCANSO</button>
-        <button class="bg-slate-800 w-40 text-sm">Finalizar Jornada</button>
+        <button className="bg-slate-800 w-28 h-10 text-sm">DESCANSO</button>
+        <button className="bg-slate-800 w-40 text-sm">Finalizar Jornada</button>
       </div>
     </div>
   );
