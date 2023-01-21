@@ -10,11 +10,14 @@ export const LoginForm = () => {
           ev.preventDefault();
           login(user, password);
         }}
-        className="card bg-base-100 shadow-xl "
+        className="card bg-base-300 shadow-xl "
       >
         <div className="card-body items-center text-center">
-          <h2 className="card-title mt-6 mb-7">Ingreso</h2>
-          <p>Nombre de usuario</p>
+          <div className="font-bold  text-primary-focus  ml-2 mt-1 mb-1 vy-sm:text-2xl sm:pb-1 md:pb-1 md:text-2xl lg:ml-6 lg:text-4xl ">
+            CallCenter
+          </div>
+          <h2 className="card-title mt-2 mb-5">Ingreso</h2>
+          <label className="px-2 w-80 sm:text-left">Nombre de usuario</label>
           <input
             type="text"
             name="user"
@@ -24,7 +27,7 @@ export const LoginForm = () => {
             onChange={(ev) => setUser(ev.target.value)}
             className="input input-bordered input-primary w-full max-w-xs"
           />
-          <p className="pt-4">Contraseña</p>
+          <label className="px-2 w-80 sm:text-left">Constraseña</label>
           <input
             type="password"
             name="password"
@@ -45,7 +48,6 @@ export const LoginForm = () => {
 };
 
 const login = (user, password) => {
-  if (user === 'user' && password === 'callcenter')
-    alert("inicio de sesión");
+  if (user === "user" && password === "callcenter") alert("inicio de sesión");
   else alert("Usuario y/o Contraseña incorrecta");
 };
