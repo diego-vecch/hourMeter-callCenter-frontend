@@ -1,3 +1,5 @@
+import Button from "./Button";
+
 export const Initiation = ({ setMode }) => {
   return (
     <>
@@ -8,12 +10,7 @@ export const Initiation = ({ setMode }) => {
             Total de horas trabajadas
           </p>
           <div className="card-actions py-4 md:py-2">
-            <button
-              className=" bg-slate-900 hover:bg-sky-400 hover:text-gray-50 rounded text-xs px-1 py-1 w-28 vy-sm:w-36 vy-sm:h-8 md:text-base "
-              onClick={() => setMode("working")}
-            >
-              Iniciar Jornada
-            </button>
+            <Button onClick={() => setMode("working")}>Iniciar</Button>
           </div>
         </div>
       </div>
