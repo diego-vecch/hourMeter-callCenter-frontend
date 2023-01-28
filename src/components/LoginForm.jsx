@@ -1,14 +1,24 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { tryLogin } from "../services/auth";
+
 export const LoginForm = () => {
   const [user, setUser] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
 
   return (
     <div>
       <form
-        onSubmit={(ev) => {
+        onSubmit={async (ev) => {
           ev.preventDefault();
-          login(user, password);
+          try {
+            const data = await tryLogin(user, password);
+            localStorage.setItem("usersData", JSON.stringify(data));
+            navigate("user-control-panel");
+          } catch (error) {
+            alert("Credenciales inválidas");
+          }
         }}
         className="card bg-base-300 shadow-xl "
       >
